@@ -1273,40 +1273,22 @@ section,
 .starter-section {
   /* Add your styles here */
 }
-
 /*--------------------------------------------------------------
 # Projects Section
 --------------------------------------------------------------*/
 
-#projects {
-  padding: 80px 20px;
-  background-color: var(--background-color);
-  color: var(--default-color);
-}
-
-/* Main Projects Title */
-.project-title {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 60px;
-  font-weight: 700;
-  color: var(--heading-color);
-}
-
-/* Project Subsections */
 .project-subsection {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
-.project-subsection h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+.project-subsection h3 {
+  font-size: 20px;
   font-weight: 600;
-  color: var(--heading-color);
+  margin-bottom: 10px;
 }
 
 .project-subsection p {
-  font-size: 1.1rem;
+  font-size: 15px;
   line-height: 1.6;
-  color: var(--default-color);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
