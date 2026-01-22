@@ -1302,3 +1302,24 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
+/*--------------------------------------------------------------
+# Any existing CSS above
+--------------------------------------------------------------*/
+
+/* Resume layout improvements */
+.resume .resume-item ul {
+  padding-left: 18px;
+}
+
+.resume .resume-item ul li {
+  margin-bottom: 6px;
+}
+
+.resume .resume-title {
+  margin-top: 25px;
+}
+
+.resume .resume-item {
+  margin-bottom: 20px;
+}
+
