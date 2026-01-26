@@ -907,12 +907,12 @@ section,
 
 
 /*--------------------------------------------------------------
-# Process Section
+# Process Section - Light outline boxes
 --------------------------------------------------------------*/
 
 .process .icon-box {
-  background: color-mix(in srgb, var(--accent-color), transparent 96%);
-  border: 2px solid var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), white 95%); /* very light blue fill */
+  border: 2px solid var(--accent-color); /* blue outline */
   border-radius: 12px;
   padding: 30px 20px;
   height: 100%;
@@ -920,13 +920,12 @@ section,
 }
 
 .process .icon-box:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 85%);
+  background: color-mix(in srgb, var(--accent-color), white 85%); /* slightly darker on hover */
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px
-    color-mix(in srgb, var(--accent-color), transparent 60%);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
-/* Icon circle */
+/* Icon circle - keep accent color */
 .process .icon-box .icon {
   width: 60px;
   height: 60px;
@@ -938,24 +937,26 @@ section,
   margin-bottom: 15px;
 }
 
-/* Icon */
+/* Icon color */
 .process .icon-box .icon i {
   color: var(--contrast-color);
   font-size: 28px;
 }
 
-/* Headings */
+/* Heading color */
 .process .icon-box h4 {
   color: var(--accent-color);
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-/* Text */
+/* Text color */
 .process .icon-box p {
   color: var(--default-color);
   font-size: 15px;
   line-height: 1.6;
+}
+
 
 
 /*--------------------------------------------------------------
