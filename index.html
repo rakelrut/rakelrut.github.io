@@ -582,7 +582,7 @@
           <!-- Challenges -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="300">
             <h4>Challenges and Problem Solving</h4>
-        
+          
             <p>
               One of the main challenges involved changing section names and ensuring 
               that the navigation menu stayed synchronized with the correct sections. 
@@ -591,15 +591,36 @@
               the menu links no longer matched the section IDs, causing navigation issues 
               where the page either scrolled incorrectly or returned to the homepage.
             </p>
-        
+          
             <p>
-              To fix this, I carefully reviewed how internal anchor links work in HTML. 
+              To fix this, I reviewed how internal anchor links function in HTML. 
               I updated both the <strong>href</strong> values in the navigation menu and 
               the corresponding section <strong>ID attributes</strong> so they matched exactly. 
-              This required attention to detail, as even small spelling differences prevented 
-              the links from functioning correctly.
+              This required precision, as even minor spelling differences prevented the 
+              navigation from functioning properly.
             </p>
-        
+          
+            <p>
+              Another issue occurred when creating new sections such as <strong>Project</strong> 
+              and <strong>Process</strong>. The original template included a scroll animation 
+              where each paragraph smoothly fades and moves upward when scrolled into view. 
+              However, the new sections I created did not automatically include this effect.
+            </p>
+          
+            <p>
+              After investigating the template structure, I discovered that the animation 
+              depended on specific <strong>data-aos</strong> attributes being added to each 
+              container. Since my new code did not include these attributes, the animation 
+              was not triggered. Once I added the correct <strong>data-aos="fade-up"</strong> 
+              properties and delay values to the new sections, the scrolling animation 
+              worked consistently across the entire website.
+            </p>
+          
+            <p>
+              Learning how the animation system worked improved my understanding of how 
+              external libraries and attributes control visual effects within a template.
+            </p>
+          
             <p>
               Another significant challenge was learning how to use GitHub for the first time. 
               I had never worked with repositories, commits, or GitHub Pages before. 
@@ -608,24 +629,21 @@
               This was resolved by first creating an empty folder in the repository and then 
               manually uploading the required files.
             </p>
-        
+          
             <p>
               Since this was also my first time coding in HTML and CSS, understanding the 
               structure of the template and how Bootstrap classes controlled layout and styling 
-              was challenging. When adding new sections such as <strong>Project</strong> and 
-              <strong>Process</strong>, the template styling did not automatically apply. 
-              I had to modify both the HTML and the <strong>main.css</strong> file to ensure 
-              visual consistency across the website.
+              required experimentation and problem-solving.
             </p>
-        
+          
             <p>
               Throughout the project, ChatGPT was used as a learning tool to better understand 
-              coding concepts and solve technical problems. It helped explain how certain 
-              parts of the code worked and guided me through debugging issues. 
-              Rather than simply copying code, I focused on understanding why changes were needed 
-              and how they affected the overall functionality of the website.
+              coding concepts and troubleshoot issues. It helped explain unfamiliar elements 
+              and guided me in debugging errors. I focused on understanding the logic behind 
+              the solutions rather than simply copying code, which strengthened my overall 
+              comprehension of web development.
             </p>
-        
+          
           </div>
         
           <!-- Contact Form -->
