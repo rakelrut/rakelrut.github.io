@@ -534,11 +534,49 @@
                   iStock – Gears on a Project
                 </a>
               </li>
-              <li>Personal portrait image (JPG)</li>
               <a href="assets/img/Portrait.jpg" target="_blank">Portrait Image (JPG)</a
             </ul>
+          </div>
         
-            <!-- INSERT SCREENSHOT HERE -->
+          <!-- Design Decisions -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="200">
+            <h4>Design and Structure Decisions</h4>
+            <p>
+              Usability and navigation were prioritized from the beginning. 
+              The fixed side navigation menu was kept because it allows users to easily 
+              move between sections. A blue accent color was chosen to create a clean 
+              and professional visual identity with strong contrast.
+            </p>
+        
+            <p>
+              Sections such as <em>Portfolio</em> and <em>Testimonials</em> were removed 
+              as they were not relevant to the project requirements. Instead, new sections 
+              such as <strong>Projects</strong>, <strong>Process</strong>, and <strong>Goals</strong> 
+              were created to better document the development process.
+            </p>
+          </div>
+        
+          <!-- Images -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="250">
+            <h4>Image Customization and Optimization</h4>
+            <p>
+              All default template images were replaced with personal or royalty-free images 
+              to personalize the website. Images were resized and optimized to reduce loading 
+              times while maintaining good visual quality on different devices.
+            </p>
+        
+            <p><strong>Image Sources:</strong></p>
+            <ul>
+              <li>
+                Background Image:
+                <a href="https://www.istockphoto.com/photo/gears-on-a-project-gm538785322-95893179" target="_blank">
+                  iStock – Gears on a Project
+                </a>
+              </li>
+              <li>Personal portrait image (JPG)</li>
+            </ul>
+        
+            <!-- INSERT SCREENSHOTS HERE -->
           </div>
         
           <!-- Challenges -->
@@ -546,25 +584,48 @@
             <h4>Challenges and Problem Solving</h4>
         
             <p>
-              One of the main challenges involved the <strong>Projects</strong> section. 
-              Initially, the navigation menu linked to a section called "Project," but that section had not yet been created. 
-              As a result, when users clicked the link in the menu, the page redirected to the homepage instead of a dedicated Projects section.
+              One of the main challenges involved changing section names and ensuring 
+              that the navigation menu stayed synchronized with the correct sections. 
+              The template relied on specific <strong>ID attributes</strong> that matched 
+              the links in the side navigation menu. When section names were modified, 
+              the menu links no longer matched the section IDs, causing navigation issues 
+              where the page either scrolled incorrectly or returned to the homepage.
             </p>
         
             <p>
-              To resolve this issue, a new section with the correct ID was created in the HTML file. 
-              However, after adding the section, the template styling was not automatically applied. 
-              This required additional adjustments in both <strong>index.html</strong> and <strong>main.css</strong> to ensure visual consistency with the rest of the site.
+              To fix this, I carefully reviewed how internal anchor links work in HTML. 
+              I updated both the <strong>href</strong> values in the navigation menu and 
+              the corresponding section <strong>ID attributes</strong> so they matched exactly. 
+              This required attention to detail, as even small spelling differences prevented 
+              the links from functioning correctly.
             </p>
         
             <p>
-              Another technical challenge occurred when uploading the project to GitHub Pages. 
-              The <strong>assets</strong> folder was too large to upload in one attempt. 
-              To solve this, an empty assets folder was first created in the repository, and the internal folders were then uploaded manually. 
-              This helped resolve the file structure issue and ensured the website displayed correctly.
+              Another significant challenge was learning how to use GitHub for the first time. 
+              I had never worked with repositories, commits, or GitHub Pages before. 
+              Understanding how files are uploaded, structured, and deployed was initially confusing. 
+              In particular, there were issues uploading the <strong>assets</strong> folder due to its size. 
+              This was resolved by first creating an empty folder in the repository and then 
+              manually uploading the required files.
             </p>
         
-            <!-- INSERT SCREENSHOT OF ERROR OR CODE FIX HERE -->
+            <p>
+              Since this was also my first time coding in HTML and CSS, understanding the 
+              structure of the template and how Bootstrap classes controlled layout and styling 
+              was challenging. When adding new sections such as <strong>Project</strong> and 
+              <strong>Process</strong>, the template styling did not automatically apply. 
+              I had to modify both the HTML and the <strong>main.css</strong> file to ensure 
+              visual consistency across the website.
+            </p>
+        
+            <p>
+              Throughout the project, ChatGPT was used as a learning tool to better understand 
+              coding concepts and solve technical problems. It helped explain how certain 
+              parts of the code worked and guided me through debugging issues. 
+              Rather than simply copying code, I focused on understanding why changes were needed 
+              and how they affected the overall functionality of the website.
+            </p>
+        
           </div>
         
           <!-- Contact Form -->
