@@ -485,75 +485,129 @@
     
         <!-- Project 1 -->
         <div id="project1" class="project-subsection" data-aos="fade-up" data-aos-delay="150">
-          <h3>Project 1</h3>
-       
-      
+          <h3>Project 1 – Personal Portfolio Website</h3>
         
-        <!-- Project 1 Step 1 -->
-        <div class="project-subsection" data-aos="fade-up" data-aos-delay="150">
-          <div>
-              For the first project, I used the iPortfolio Bootstrap 5 Resume Template,
-              downloaded from 
-              <a href="https://htmltemplates.co/free-website-templates/iportfolio-free-bootstrap-5-resume-template">Iportfolio download</a>.
-              This template was selected because it offers a clean
-              and structured layout suitable for a personal portfolio.
-              Built with Bootstrap 5, it is fully responsive and allowed me to
-              focus on content customization rather than layout development.
+          <!-- Introduction -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              For this project, I built a personal portfolio website using the 
+              <strong>iPortfolio Bootstrap 5 Resume Template</strong> from 
+              <a href="https://htmltemplates.co/free-website-templates/iportfolio-free-bootstrap-5-resume-template" target="_blank">
+                iPortfolio
+              </a>. 
+              The template was chosen because it provides a clean, modern, and well-structured layout that is suitable for a professional portfolio. 
+              Since it is built with Bootstrap 5, it is fully responsive and adapts well to different screen sizes. 
+              Using a template allowed me to focus primarily on customization, content development, and problem-solving rather than building the layout entirely from scratch.
+            </p>
           </div>
-      
-          <!-- Project 1 Step 2 -->
+        
+          <!-- Design Decisions -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="200">
-              At the start of the project, usability and navigation were prioritized.
-              The fixed side navigation menu was retained to allow easy access to
-              different sections of the website. A blue accent color was chosen to
-              create a professional appearance with strong visual contrast. Sections
-              such as Portfolio and Testimonials were removed as they were not relevant
-              to the project requirements.
+            <h4>Design and Structure Decisions</h4>
+            <p>
+              At the beginning of the project, usability and navigation were prioritized. 
+              The fixed side navigation menu was kept from the original template because it allows users to quickly access different sections of the website. 
+              A blue accent color was selected to create a professional and clean appearance with strong visual contrast.
+            </p>
+        
+            <p>
+              Some sections from the original template were removed, including <em>Portfolio</em> and <em>Testimonials</em>, as they were not relevant to the project requirements. 
+              Instead, new sections were created, such as <strong>Projects</strong>, <strong>Process</strong>, and <strong>Goals</strong>, to better reflect the purpose of the website and document the development process.
+            </p>
           </div>
-      
-          <!-- Project 1 Step 3 -->
+        
+          <!-- Images -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="250">
-              All images from the original template were replaced with personal or
-              royalty-free images. These images were resized and optimized to reduce
-              loading times while maintaining good visual quality across various
-              screen sizes.
-          </br>
-          <div
-              Image Links 
+            <h4>Image Customization and Optimization</h4>
+            <p>
+              All default template images were replaced with personal or royalty-free images to personalize the website. 
+              The background image for the homepage was sourced from iStock, and a personal portrait photo was added to the About section.
+              Each image was resized and optimized to improve loading speed while maintaining visual quality across devices.
+            </p>
+        
+            <!-- You can insert screenshots below -->
+            <p><strong>Image Sources:</strong></p>
+            <ul>
+              <li>
+                Background Image:
+                <a href="https://www.istockphoto.com/photo/gears-on-a-project-gm538785322-95893179" target="_blank">
+                  iStock – Gears on a Project
+                </a>
+              </li>
+              <li>Personal portrait image (JPG)</li>
+            </ul>
+        
+            <!-- INSERT SCREENSHOT HERE -->
           </div>
-            
-          <ul>
-              <a href="https://www.istockphoto.com/photo/gears-on-a-project-gm538785322-95893179">Background image for thr home page</a>  
-          </ul>
-            
-          <ul>
-            <a href="assets/img/Portrait.jpg" target="_blank">Portrait Image (JPG)</a
-          </ul>
-              
-          </br>
-             
-          </div>
-      
-          <!-- Project 1 Step 4 -->
+        
+          <!-- Challenges -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="300">
-              Several external tools were used throughout the project. Canva was used
-              to design the logo, application icon, and favicon. The website is hosted
-              on GitHub Pages, which does not support PHP-based forms. To address this,
-              the contact form was integrated with Formspree, enabling form submissions
-              without server-side scripting.
+            <h4>Challenges and Problem Solving</h4>
+        
+            <p>
+              One of the main challenges involved the <strong>Projects</strong> section. 
+              Initially, the navigation menu linked to a section called "Project," but that section had not yet been created. 
+              As a result, when users clicked the link in the menu, the page redirected to the homepage instead of a dedicated Projects section.
+            </p>
+        
+            <p>
+              To resolve this issue, a new section with the correct ID was created in the HTML file. 
+              However, after adding the section, the template styling was not automatically applied. 
+              This required additional adjustments in both <strong>index.html</strong> and <strong>main.css</strong> to ensure visual consistency with the rest of the site.
+            </p>
+        
+            <p>
+              Another technical challenge occurred when uploading the project to GitHub Pages. 
+              The <strong>assets</strong> folder was too large to upload in one attempt. 
+              To solve this, an empty assets folder was first created in the repository, and the internal folders were then uploaded manually. 
+              This helped resolve the file structure issue and ensured the website displayed correctly.
+            </p>
+        
+            <!-- INSERT SCREENSHOT OF ERROR OR CODE FIX HERE -->
           </div>
-          
-          <!-- Project 1 Step 5 -->
+        
+          <!-- Contact Form -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="350">
-              One of the main challenges involved the Projects section. Initially, the
-              navigation menu linked to a non-existent section, causing navigation
-              issues. This was resolved by creating a dedicated Projects section and
-              updating both HTML and CSS files to maintain visual consistency. This
-              process strengthened my skills in troubleshooting, layout customization,
-              and understanding hosting limitations.
+            <h4>Contact Form Integration</h4>
+            <p>
+              The original template used a PHP-based contact form. 
+              However, GitHub Pages does not support server-side PHP processing. 
+              This meant the contact form could not send emails directly.
+            </p>
+        
+            <p>
+              To overcome this limitation, the form was integrated with Formspree. 
+              Formspree allows form submissions without requiring server-side scripting. 
+              After integration, form submissions were successfully received through the Formspree dashboard, including the sender’s name, email, subject, and message.
+            </p>
+        
+            <!-- INSERT SCREENSHOT OF FORMSPREE DASHBOARD HERE -->
           </div>
+        
+          <!-- Tools Used -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="400">
+            <h4>Tools and Technologies Used</h4>
+            <ul>
+              <li>HTML5 & CSS3</li>
+              <li>Bootstrap 5</li>
+              <li>GitHub Pages (Hosting)</li>
+              <li>Formspree (Form handling)</li>
+              <li>Canva (Logo, app icon, favicon design)</li>
+            </ul>
+          </div>
+        
+          <!-- Skills Developed -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="450">
+            <h4>Skills Developed</h4>
+            <p>
+              This project improved my understanding of responsive web design, template customization, 
+              debugging navigation issues, managing hosting limitations, and optimizing website assets. 
+              It also strengthened my problem-solving skills when working with file structures and third-party integrations.
+            </p>
+          </div>
+        
         </div>
-        <!-- Project 1 -->
+        <!-- End Project 1 -->
         
     
         <!-- Project 2 -->
