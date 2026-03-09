@@ -717,13 +717,235 @@
                 
             
         <!-- Project 2 -->
-        <div id="project2" class="project-subsection" data-aos="fade-up" data-aos-delay="200">
+                <div id="project1" class="project-subsection" data-aos="fade-up" data-aos-delay="150">
+          
           <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 20px;">
             Project 2
           </h3>
-          <p>Details about Project 2...</p>
+        
+          <!-- Introduction -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              For this project, I developed a personal portfolio website using the 
+              <strong>iPortfolio Bootstrap 5 Resume Template</strong> downloaded from 
+              <a href="https://htmltemplates.co/free-website-templates/iportfolio-free-bootstrap-5-resume-template" target="_blank">
+                htmltemplates.co
+              </a>. 
+              The template was selected because it offers a clean, professional, and structured layout 
+              that is well suited for a portfolio website. Since it is built using Bootstrap 5, 
+              it is fully responsive and automatically adapts to various screen sizes.
+            </p>
+        
+            <p>
+              Rather than building a website completely from scratch, the objective of this project 
+              was to customize an existing template and adapt it to meet academic requirements. 
+              This required understanding how the template was structured, how Bootstrap classes 
+              controlled layout and responsiveness, and how different HTML and CSS components 
+              interacted with one another.
+            </p>
+          </div>
+        
+          <!-- Homepage & Content Customization -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="175">
+            <h4>Homepage and Content Customization</h4>
+        
+            <p>
+              The homepage content was fully customized to reflect my education and the course 
+              I am currently studying. The original placeholder text from the template was removed 
+              and replaced with relevant academic information. Additionally, text in the 
+              <strong>About</strong> and <strong>Resume</strong> sections was rewritten to 
+              represent my own background instead of the template example content.
+            </p>
+          </div>
+        
+          <!-- What I Changed -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="200">
+            <h4>What I Changed from the Original Template</h4>
+        
+            <p>
+              The template underwent significant structural and visual modifications 
+              to transform it into a personalized academic portfolio website.
+            </p>
+        
+            <ul>
+              <li>Removed the <strong>Portfolio</strong> and <strong>Testimonials</strong> sections as they were not required.</li>
+              <li>Modified the section originally called <strong>"downdeep"</strong> and restructured it into a new <strong>Projects</strong> section.</li>
+              <li>Created subsections within Projects including <strong>Project 1</strong>, <strong>Project 2</strong>, <strong>Project 3</strong>, and <strong>Final Project</strong>.</li>
+              <li>Created additional sections such as <strong>Process</strong> and <strong>Goals</strong>.</li>
+              <li>Replaced all template images with personal or royalty-free images.</li>
+              <li>Resized and optimized images to reduce loading time.</li>
+              <li>Customized homepage text to reflect my education and course.</li>
+              <li>Edited content in About and Resume sections.</li>
+              <li>Created a custom logo, app icon, and favicon using Canva.</li>
+              <li>Integrated Formspree instead of the original PHP contact form.</li>
+              <li>Adjusted CSS styling to preserve the visual theme after structural changes.</li>
+            </ul>
+          </div>
+        
+          <!-- Design & Theme -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="250">
+            <h4>Design Decisions and Visual Theme</h4>
+        
+            <p>
+              A key visual feature of the template is its alternating section design. 
+              Sections switch between white backgrounds and blue-tinted backgrounds, 
+              creating contrast and making each section stand out individually. 
+              I decided to preserve this design because it enhances readability 
+              and gives the page a clear visual structure.
+            </p>
+        
+            <p>
+              However, after removing several original sections, the alternating pattern 
+              became inconsistent. To correct this, adjustments were made to the HTML structure 
+              and CSS styling to ensure that the alternating background pattern continued 
+              correctly throughout the page.
+            </p>
+        
+            <p>
+              The fixed side navigation menu was also retained because it improves usability 
+              and allows users to quickly access each section of the website.
+            </p>
+          </div>
+        
+          <!-- Image Customization -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="275">
+            <h4>Image Replacement and Optimization</h4>
+        
+            <p>
+              All default template images were replaced with personal or royalty-free images. 
+              The homepage background image was sourced from iStock:
+            </p>
+        
+            <ul>
+              <li>
+                <a href="https://www.istockphoto.com/photo/gears-on-a-project-gm538785322-95893179" target="_blank">
+                  iStock – Gears on a Project
+                </a>
+              </li>
+            </ul>
+            
+            <ul>
+              <li>
+                Personal portrait photograph<br>
+                <img src="assets/img/Portrait.jpg" alt="Portrait Image" class="img-fluid rounded shadow" style="max-width:300px;"> 
+              </li>
+            </ul>
+
+          </div>
+        
+          <!-- Challenges -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="300">
+            <h4>Challenges and Technical Problem Solving</h4>
+        
+            <p>
+              One major issue occurred when creating the new <strong>Projects</strong> section. 
+              Initially, the navigation menu linked to a section called "Project" that did not exist. 
+              When clicked, the page redirected to the homepage because the ID could not be found.
+            </p>
+        
+            <p>
+              This was resolved by creating a properly structured section with the correct ID 
+              and ensuring that the navigation menu <strong>href</strong> values matched exactly.
+            </p>
+        
+            <p>
+              After adding the section, the template styling did not automatically apply. 
+              The design of the new section differed from the rest of the page. 
+              To fix this, modifications were made in both <strong>index.html</strong> 
+              and <strong>main.css</strong> to maintain visual consistency.
+            </p>
+        
+            <p>
+              Another challenge involved the template’s scroll animation system. 
+              The template uses <strong>data-aos="fade-up"</strong> attributes 
+              to animate elements when they scroll into view. 
+              Newly created sections did not include these attributes, 
+              so the animation effect did not work.
+            </p>
+        
+            <p>
+              After analyzing the code, I added the correct AOS attributes 
+              and delay values to each new subsection, restoring the 
+              smooth fade-up animation across the entire site.
+            </p>
+        
+            <p>
+              Additionally, this was my first time using GitHub and GitHub Pages. 
+              Understanding repositories, commits, deployment, and file structure 
+              required experimentation and learning.
+            </p>
+        
+            <p>
+              Uploading the <strong>assets</strong> folder caused difficulties due to 
+              size and structure limitations. The issue was resolved by first creating 
+              an empty assets folder in the repository and then manually uploading 
+              the necessary subfolders and files.
+            </p>
+        
+            <p>
+              Since this was also my first experience coding in HTML and CSS, 
+              understanding how Bootstrap classes affected layout and responsiveness 
+              required patience and practice.
+            </p>
+        
+            <p>
+              Throughout the project, ChatGPT was used as a learning tool to explain 
+              unfamiliar coding concepts and assist in debugging issues. 
+              Rather than copying code without understanding it, I focused on learning 
+              the logic behind the solutions.
+            </p>
+          </div>
+        
+          <!-- Contact Form -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="350">
+            <h4>Contact Form and Hosting Limitations</h4>
+        
+            <p>
+              The original template included a PHP-based contact form. 
+              However, GitHub Pages does not support server-side PHP execution. 
+              This meant the contact form could not send emails directly.
+            </p>
+        
+            <p>
+              To overcome this limitation, the form was integrated with Formspree. 
+              Formspree processes form submissions externally and allowed 
+              messages to be received through the Formspree dashboard, 
+              including name, email, subject, and message.
+            </p>
+          </div>
+        
+          <!-- Tools -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="400">
+            <h4>Tools and Technologies Used</h4>
+            <ul>
+              <li>HTML5 & CSS3</li>
+              <li>Bootstrap 5</li>
+              <li>GitHub & GitHub Pages</li>
+              <li>Formspree</li>
+              <li>Canva (Logo, App Icon, Favicon)</li>
+            </ul>
+          </div>
+        
+          <!-- Reflection -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="450">
+            <h4>Reflection and Learning Outcomes</h4>
+        
+            <p>
+              This project was both technically challenging and educational. 
+              It required learning new tools, understanding template structure, 
+              debugging navigation systems, managing hosting limitations, 
+              and adapting third-party services.
+            </p>
+        
+            <p>
+              Completing this project significantly improved my understanding of 
+              front-end web development and increased my confidence in working 
+              with HTML, CSS, Bootstrap, GitHub, and external integrations.
+            </p>
+          </div>
+        
         </div>
-    
+
         <!-- Project 3 -->
         <div id="project3" class="project-subsection" data-aos="fade-up" data-aos-delay="250">
           <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 20px;">
