@@ -1087,9 +1087,112 @@
         <!-- Project 3 -->
         <div id="project3" class="project-subsection" data-aos="fade-up" data-aos-delay="250">
           <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 20px;">
-            Project 3
+          Project Idea
           </h3>
-          <p>Details about Project 3...</p>
+            
+          <p>
+          I decided to design something useful for my car. I ended up creating a trash can, but not just a regular one. 
+          This trash can is designed to perfectly fit a specific compartment in my car. The compartment is located where 
+          an armrest is often placed in many cars. In my car it doesn't really serve any purpose except collecting trash, 
+          so I thought it would be a perfect place for a small custom trash can.
+          </p>
+          </section>
+          
+          
+          <section>
+          <h2>Measuring the Compartment</h2>
+          <p>
+          The first step was to recreate the bottom and top shape of the compartment. I first tried removing the rubber mat 
+          inside the compartment, but that was not possible. After that I attempted to measure the compartment directly, but 
+          since the shape is irregular it was very difficult to measure accurately.
+          </p>
+          
+          <p>
+          Instead, I decided to take photos of the compartment with a measuring tape visible in the images. This allowed me 
+          to estimate the correct scale and trace the shape digitally. I did this for both the top and the bottom of the compartment.
+          </p>
+          </section>
+          
+          
+          <section>
+          <h2>First Prototypes</h2>
+          <p>
+          I printed my first prototypes using a Creality K2 3D printer. The pieces almost fit, but both of them were slightly 
+          too long. I believe this happened because the photos were not taken perfectly from above, which caused some 
+          perspective distortion when scaling the shapes.
+          </p>
+          
+          <p>
+          To fix this, I made a cardboard version of the shape by tracing the printed prototype onto corrugated cardboard. 
+          I cut it out and manually adjusted the shape until it fit perfectly inside the compartment. Then I scanned the 
+          cardboard template and created a second prototype which I printed on a Prusa printer in VR-III. 
+          This prototype fit perfectly.
+          </p>
+          </section>
+          
+          
+          <section>
+          <h2>Designing the Trash Can</h2>
+          <p>
+          The compartment is not equally deep everywhere, so I needed to calculate the correct angle for the top surface. 
+          I measured the depth at several different locations and recreated these measurements in Fusion. Using these 
+          measurements I tilted the top plane to match the slope of the compartment.
+          </p>
+          
+          <p>
+          Once the correct angle was established, I created the walls of the trash can and added a bottom surface. 
+          The walls were extended 1 cm above the compartment to create a visible rim. I also designed a lid with 
+          a circular swing door.
+          </p>
+          
+          <p>
+          The swing lid was inspired by this design:
+          <a href="https://cults3d.com/en/3d-model/home/trash-can-with-swing-lid" target="_blank">
+          Trash Can With Swing Lid
+          </a>.
+          </p>
+          </section>
+          
+          
+          <section>
+          <h2>Adding Text with Inkscape</h2>
+          <p>
+          To add a personal touch, I added text to the bottom of the trash can that says 
+          <strong>"Rusl Rakelar"</strong>.
+          </p>
+          
+          <p>
+          To do this I used Inkscape. I created the text and converted it using 
+          Text → Text and Font → Text to Path → Object to Path. 
+          The file was then exported as an SVG file and imported into a sketch in Fusion where I extruded the text into the model.
+          </p>
+          </section>
+          
+          
+          <section>
+          <h2>Preparing for 3D Printing</h2>
+          <p>
+          After confirming that all parts worked correctly, I aligned the entire model with the XY plane and exported it 
+          as a 3MF file. The file was then imported into the Creality K2 slicer.
+          </p>
+          
+          <p>
+          Because some edges of the lid extend outward, I needed to generate support structures to ensure the print would 
+          succeed.
+          </p>
+          </section>
+          
+          
+          <section>
+          <h2>What I Learned</h2>
+          <ul>
+          <li>Measuring irregular shapes can be difficult and often requires multiple techniques.</li>
+          <li>Photos can help estimate scale, but camera angle can introduce distortion.</li>
+          <li>Test prints are extremely useful for refining dimensions.</li>
+          <li>Cardboard prototypes can save time and plastic during early iterations.</li>
+          <li>SVG files from Inkscape can be imported into Fusion to add custom text or graphics.</li>
+          </ul>
+          </section>
         </div>
 
 
