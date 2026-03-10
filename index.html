@@ -731,7 +731,7 @@
           <!-- Introduction -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="150">
             <p>
-              This project was part of my work in computer-controlled fabrication, 
+              This project was part of my work in computer controlled fabrication, 
               where the goal was to design and manufacture an object using digital tools and a laser cutter. 
               The process involved designing parts in CAD software, testing material tolerances, 
               and preparing files for laser cutting. 
@@ -744,19 +744,13 @@
             </p>
             <p>
               After multiple design iterations, I decided to change direction and instead create a decorative lamp made from black plexiglass. 
-              The lamp uses laser-cut patterns that allow light to pass through the material and create shadow silhouettes. 
+              The lamp uses lasercut patterns that allow light to pass through the material and create shadow silhouettes. 
               The project required testing kerf values, designing finger joints, preparing vector graphics, 
               and assembling the final object with electrical components.
             </p>
             <p>
               This project demonstrates the full workflow from idea and digital design to testing, fabrication, 
               and final assembly using laser cutting and digital fabrication tools. 
-            </p>
-            
-            <p>  
-              The template was selected because it offers a clean, professional, and structured layout 
-              that is well suited for a portfolio website. Since it is built using Bootstrap 5, 
-              it is fully responsive and automatically adapts to various screen sizes.
             </p>
           </div>
 
@@ -765,7 +759,7 @@
             <h4>Idea and Brainstorming</h4>
             <p>
               At the beginning of the project I decided to design a small wall-mounted shelf. 
-              I wanted to create something simple but functional that could be assembled using press-fit joints instead of screws or glue. 
+              I wanted to create something simple but functional that could be assembled using press fit joints instead of screws or glue. 
               The idea was to explore how laser cutting could be used to create structural parts that fit together precisely. 
               The inspiration for the shelf came from Pinterest 
               <a href="https://www.pinterest.com/pin/914301161862349215/">
@@ -782,7 +776,7 @@
             </p>
             <p>
               The goal was to design the shelf parametrically, meaning that the most important dimensions—such as material thickness, 
-              shelf width, and height—could easily be adjusted without breaking the model.
+              shelf width, and height could easily be adjusted without breaking the model.
             </p>
           </div>
         
@@ -815,65 +809,93 @@
               clearly defined, which made it easier to adjust the overall 
               size of the design.
             </p>
-        
-            <ul>
-              <li>Removed the <strong>Portfolio</strong> and <strong>Testimonials</strong> sections as they were not required.</li>
-              <li>Modified the section originally called <strong>"downdeep"</strong> and restructured it into a new <strong>Projects</strong> section.</li>
-              <li>Created subsections within Projects including <strong>Project 1</strong>, <strong>Project 2</strong>, <strong>Project 3</strong>, and <strong>Final Project</strong>.</li>
-              <li>Created additional sections such as <strong>Process</strong> and <strong>Goals</strong>.</li>
-              <li>Replaced all template images with personal or royalty-free images.</li>
-              <li>Resized and optimized images to reduce loading time.</li>
-              <li>Customized homepage text to reflect my education and course.</li>
-              <li>Edited content in About and Resume sections.</li>
-              <li>Created a custom logo, app icon, and favicon using Canva.</li>
-              <li>Integrated Formspree instead of the original PHP contact form.</li>
-              <li>Adjusted CSS styling to preserve the visual theme after structural changes.</li>
-            </ul>
           </div>
         
-          <!-- Design & Theme -->
+          <!-- Parametric Challenges -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="250">
-            <h4>Design Decisions and Visual Theme</h4>
+            <h4>Parametric Challenges</h4>
         
             <p>
-              A key visual feature of the template is its alternating section design. 
-              Sections switch between white backgrounds and blue-tinted backgrounds, 
-              creating contrast and making each section stand out individually. 
-              I decided to preserve this design because it enhances readability 
-              and gives the page a clear visual structure.
+              Even though the second version of the shelf worked better, 
+              I still ran into some issues with the parametric behavior of the model. 
+              For example, when I changed the length of one part of the shelf, 
+              the other connected parts did not follow automatically and were 
+              instead left floating in space. Ideally, changing one parameter 
+              should propagate through the entire design, 
+              but in my case some components remained unchanged and the 
+              geometry no longer matched.
             </p>
         
             <p>
-              However, after removing several original sections, the alternating pattern 
-              became inconsistent. To correct this, adjustments were made to the HTML structure 
-              and CSS styling to ensure that the alternating background pattern continued 
-              correctly throughout the page.
+              After discussing the problem, I learned that it can be helpful 
+              to create a master sketch that controls the most important dimensions 
+              of the design. This master sketch acts as the main reference for the 
+              rest of the model. Individual parts can then reference geometry from 
+              that sketch, ensuring that changes propagate consistently throughout the design.
             </p>
         
             <p>
-              The fixed side navigation menu was also retained because it improves usability 
-              and allows users to quickly access each section of the website.
+              After spending quite a bit of time struggling with this and 
+              implementing a master sketch, I also realized something important 
+              about the workflow. While it is possible to fully align all the 
+              parts inside the 3D model, it is not always necessary. Since the 
+              parts will ultimately be laser cut and laid flat on the cutting bed, 
+              they do not actually need to be positioned together in a fully assembled 
+              way inside the design file.
             </p>
+
+            </p>
+              Another challenge involved the material thickness and finger joints. 
+              Since the parts were designed to fit together using finger joints, 
+              the thickness of the joints needed to match the material thickness exactly. 
+              In some parts of the model I had forgotten to define the thickness 
+              parameter for the finger joint geometry. As a result, the joints did 
+              not match the intended dimensions.
+              To correct this issue, I had to recreate some of the parts and properly 
+              define the thickness parameter so that all joints would remain consistent 
+              if the material thickness changed.
+            <p>
           </div>
         
           <!-- Image Customization -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="275">
-            <h4>Image Replacement and Optimization</h4>
-        
+            <h4>Laser Cutting Setup Problem</h4>
+
+            
             <p>
-              All default template images were replaced with personal or royalty-free images. 
-              The homepage background image was sourced from iStock:
+              Once the design was complete, I moved on to preparing the file for 
+              laser cutting inside Autodesk Fusion 360. I created a laser cutting 
+              setup and attempted to generate the cutting paths for the model.
             </p>
-        
+            
+            <p>
+              At first, something seemed wrong. The software correctly detected the 
+            holes for the finger joints along the sides of the shelf, but it refused 
+            to recognize the finger joint holes located in the center of the top plate. 
+            Because of this, those holes were not included in the cutting operation.
+
+            <p>
+              After investigating the issue, I discovered that the problem was related to 
+              the kerf setting. The kerf value had been set to 4 mm, which is extremely 
+              large for a laser cutting offset. Because of this incorrect value, 
+              the software interpreted some of the internal geometry incorrectly 
+              and refused to generate the correct cutting paths.
+            </p>
+              
+            <p>
+              At first I thought this value came from a tutorial video I had watched. 
+              However, after checking the video again, I realized that the 4 mm measurement 
+              actually referred to the nozzle size, not the kerf value. I had mistakenly 
+              assumed it was the kerf setting and entered it into the software.
+              Once I corrected the kerf value to a realistic number, the cutting paths 
+              were generated correctly and the problem was resolved.
+            </p>         
             <ul>
               <li>
                 <a href="https://www.istockphoto.com/photo/gears-on-a-project-gm538785322-95893179" target="_blank">
                   iStock – Gears on a Project
                 </a>
               </li>
-            </ul>
-            
-            <ul>
               <li>
                 Personal portrait photograph<br>
                 <img src="assets/img/Portrait.jpg" alt="Portrait Image" class="img-fluid rounded shadow" style="max-width:300px;"> 
@@ -997,6 +1019,9 @@
         <!-- End Project 2 -->
 
 
+
+
+        
         
         <!-- Project 3 -->
         <div id="project3" class="project-subsection" data-aos="fade-up" data-aos-delay="250">
@@ -1005,7 +1030,13 @@
           </h3>
           <p>Details about Project 3...</p>
         </div>
-    
+
+
+
+
+
+
+        
         <!-- Final Project -->
         <div id="final-project" class="project-subsection" data-aos="fade-up" data-aos-delay="300">
           <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 20px;">          
