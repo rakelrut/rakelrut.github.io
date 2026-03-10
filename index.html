@@ -724,7 +724,7 @@
             Project 2
           </h3>
 
-          <h2 style="font-size: 1.5rem; font-weight: 550; margin-bottom: 20px;">
+          <h2 style="font-size: 1.6rem; font-weight: 540; margin-bottom: 20px;">
             Wall-Mounted Shelf
           </h2> 
 
@@ -893,7 +893,7 @@
           </div>
 
 
-          <h2 style="font-size: 1.5rem; font-weight: 550; margin-bottom: 20px;">
+          <h2 style="font-size: 1.6rem; font-weight: 540; margin-bottom: 20px;">
             Decorative Lamp
           </h2> 
           
@@ -914,10 +914,20 @@
             </ul>
             
             <p>
-              The new idea was to create a box-shaped lamp assembled with finger joints. 
-              The sides of the box would contain decorative cut-out patterns. When light 
-              shines through the box, these cut-outs would create shadow silhouettes, 
-              producing a visually interesting lighting effect. 
+              After deciding to move away from the shelf idea, I began working on a decorative lamp design. 
+              The goal was to create something that could take advantage of the visual qualities of laser-cut acrylic. 
+              I wanted the object to not only function as a lamp but also create interesting light and shadow patterns.
+            </p>
+        
+            <p>
+              The lamp was designed as a simple finger joint box structure made from five parts: four side panels and one bottom panel, 
+              that is fasten with stab through finger joints through the side panels. 
+              I intentionally left the top open so the light could escape upward while the cut patterns on the 
+              sides would project shadows into the surrounding space. The parts were connected using finger joints, 
+              which allowed the lamp to be assembled without screws or glue.
+
+              The design was made to be simple and structurally stable while still allowing the decorative patterns 
+              to be the main visual element.
             </p>
         
             <p>
@@ -933,85 +943,123 @@
               so that the light source itself becomes the background, while the figures 
               remain as solid silhouettes that block the light.
             </p>
-        
-            <p>
-             
-            </p>
-        
-            <p>
-             
-            </p>
-        
-            <p>
-             
-            </p>
-        
-            <p>
+
+
+          
+          <!-- Lamp design -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="350">
+            <h4>Lamp design</h4>
             
+            <p>
+              To create the patterns on the sides of the lamp, I searched for visual inspiration on Pinterest. 
+              I wanted silhouettes that would look interesting when illuminated from the inside.
+              Once I found suitable images, I used Inkscape to convert them into vector graphics. 
+              Raster images cannot be used directly for laser cutting, so they first needed to be 
+              transformed into vector paths.
+            </p>
+    
+            <p>
+              In Inkscape I used the Trace Bitmap tool, which analyzes the image and converts it into vector outlines. 
+              After adjusting the traced shapes and cleaning up the paths, I exported the designs as SVG files.
+              The SVG files were then imported into Autodesk Fusion 360, where they were placed into sketches on the side panels of the lamp. 
+              From there I used sketch profiles to create cut-outs in the panels.             
             </p>
         
             <p>
-            
+              Instead of cutting out the silhouettes themselves, I chose to remove the background and leave the figures solid. 
+              This way, when the lamp is turned on, the light shines through the background areas while the figures appear as dark silhouettes.
             </p>
         
             <p>
-              
-            </p>
-        
-            <p>
-             
+              The lamp was fabricated using 3 mm black acrylic (plexiglass). This material works well for laser 
+              cutting because it produces clean edges and allows light to pass through the cut areas.
+
+              Originally I had planned to work with 5 mm plexiglass, but that material was no longer available in the lab. 
+              Because 3 mm black acrylic was still in stock, I adapted the design to work with that thickness instead.
+
+              Using darker acrylic also helped emphasize the light effect, since the contrast between the illuminated 
+              cut-outs and the dark material creates stronger shadow patterns.
             </p>
           </div>
 
             
-          <!-- Contact Form -->
+          <!-- Kerf and Joint Testing -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="350">
-            <h4>Contact Form and Hosting Limitations</h4>
-        
+            <h4>Kerf and Joint Testing</h4>
+            
             <p>
-              The original template included a PHP-based contact form. 
-              However, GitHub Pages does not support server-side PHP execution. 
-              This meant the contact form could not send emails directly.
+              Since the material had changed from the earlier design attempts, 
+              I needed to perform a new kerf test before cutting the final parts.
+
+              Kerf refers to the small amount of material removed by the laser beam during cutting. 
+              Even though the laser beam is very thin, it still removes a measurable amount of material. 
+              If this offset is not taken into account, press-fit joints can end up either too loose or too tight.
+
+              To find the correct settings, I created several test pieces to experiment with different 
+              kerf values and joint sizes. These tests included both finger joints and stab-in joints, 
+              which are small tabs that slide into corresponding slots.
+
+              In total I produced seven different test pieces, adjusting the cutting parameters each time. 
+              After evaluating how tightly the pieces fit together, I found that the best settings were:
             </p>
-        
-            <p>
-              To overcome this limitation, the form was integrated with Formspree. 
-              Formspree processes form submissions externally and allowed 
-              messages to be received through the Formspree dashboard, 
-              including name, email, subject, and message.
-            </p>
-          </div>
-        
-          <!-- Tools -->
-          <div class="project-subsection" data-aos="fade-up" data-aos-delay="400">
-            <h4>Tools and Technologies Used</h4>
+
             <ul>
-              <li>HTML5 & CSS3</li>
-              <li>Bootstrap 5</li>
-              <li>GitHub & GitHub Pages</li>
-              <li>Formspree</li>
-              <li>Canva (Logo, App Icon, Favicon)</li>
+              <li>Kerf: 0.17 mm</li>
+              <li>Speed: 22%</li>
             </ul>
-          </div>
-        
-          <!-- Reflection -->
-          <div class="project-subsection" data-aos="fade-up" data-aos-delay="450">
-            <h4>Reflection and Learning Outcomes</h4>
-        
+            
             <p>
-              This project was both technically challenging and educational. 
-              It required learning new tools, understanding template structure, 
-              debugging navigation systems, managing hosting limitations, 
-              and adapting third-party services.
+              With these settings the finger joints were tight enough to hold the structure together, 
+              but still possible to assemble without damaging the acrylic. The stab-in joints also fit 
+              securely into their slots.
+            </p>
+          <div>
+
+
+          <!-- Cutting an Assembly -->
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="350">
+            <h4>Cutting and Assembly</h4>
+            <p>
+              Once the design and settings were finalized, I proceeded to laser cut the final parts. 
+              The lamp consisted of five pieces: four side panels containing the decorative patterns and one bottom panel.
+
+              The cutting process went smoothly, and the laser successfully cut through the acrylic without any issues. 
+              The detailed patterns were reproduced very well, and the edges of the acrylic came out clean.
+
+              Some other students experienced problems where the laser did not fully cut through their material, 
+              but in my case the chosen settings worked reliably.
+            </p>
+
+
+            
+            <p>
+              During assembly I discovered that one of the side panels was missing the slots for the bottom panel. 
+              This was a design oversight, so that particular panel had to be laser cut again.
+
+              When quickly adding the missing slots, I accidentally placed them slightly too high in the design. 
+              Because of this, the finger joints on the sides did not align perfectly.
+
+              Instead of cutting yet another panel, I decided to correct the problem manually. 
+              I used sandpaper to slightly adjust the finger joints until the parts fit together properly. 
+              Since there was a limited amount of 3 mm black acrylic available, this was the safest solution.
             </p>
         
             <p>
-              Completing this project significantly improved my understanding of 
-              front-end web development and increased my confidence in working 
-              with HTML, CSS, Bootstrap, GitHub, and external integrations.
+              After all the panels fit together correctly, I assembled the lamp structure and installed the electrical components.
+              I purchased the following items from a store:
+            </p>
+            <ul>
+              <li>A power cord with an on/off switch</li>
+              <li>A light socket</li>
+              <li>A cable for connecting the components</li>
+            </ul>
+
+            <p>
+              Once these parts were installed inside the acrylic box, the lamp was complete. 
+              When turned on, the light shines through the cut-out patterns and creates shadow silhouettes on the surrounding surfaces.
+              The final result is a decorative laser-cut lamp that combines digital design, material testing, and fabrication.
             </p>
           </div>
-        
         </div>
         <!-- End Project 2 -->
 
