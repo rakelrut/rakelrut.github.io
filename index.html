@@ -1429,20 +1429,24 @@
             light.position.set(50,50,50);
             scene.add(light);
             scene.add(new THREE.AmbientLight(0x404040));
-            
-            const directional1 = new THREE.DirectionalLight(0xffffff, 1);
-            directional1.position.set(50, 50, 50);
-            scene.add(directional1);
-            
-            const directional2 = new THREE.DirectionalLight(0xffffff, 0.5);
-            directional2.position.set(-50, 50, -50);
-            scene.add(directional2);
-            
-            const ambient = new THREE.AmbientLight(0xffffff, 0.5); // bright ambient
+
+            // Main lights for a bright-room effect
+            const ambient = new THREE.AmbientLight(0xffffff, 1.0); // full soft brightness
             scene.add(ambient);
-
-
-          
+            
+            // Soft directional lights from different angles
+            const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.3);
+            dirLight1.position.set(50, 50, 50);
+            scene.add(dirLight1);
+            
+            const dirLight2 = new THREE.DirectionalLight(0xffffff, 0.3);
+            dirLight2.position.set(-50, 50, -50);
+            scene.add(dirLight2);
+            
+            const dirLight3 = new THREE.DirectionalLight(0xffffff, 0.2);
+            dirLight3.position.set(0, 50, -50);
+            scene.add(dirLight3);
+            
             const controls = new THREE.OrbitControls(camera, renderer.domElement);
           
             const loader = new THREE.GLTFLoader();
