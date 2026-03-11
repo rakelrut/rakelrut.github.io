@@ -983,9 +983,9 @@
             
             <p>
               At first, something seemed wrong. The software correctly detected the 
-            holes for the finger joints along the sides of the shelf, but it refused 
-            to recognize the finger joint holes located in the center of the top plate. 
-            Because of this, those holes were not included in the cutting operation.
+              holes for the finger joints along the sides of the shelf, but it refused 
+              to recognize the finger joint holes located in the center of the top plate. 
+              Because of this, those holes were not included in the cutting operation.
 
             <p>
               After investigating the issue, I discovered that the problem was related to 
@@ -1010,7 +1010,7 @@
             Decorative Lamp
           </h3> 
           
-          <!-- New Idea – Decorative Lamp -->
+          <!-- New Idea, Decorative Lamp -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="300">
             <h4>New Idea</h4>
         
@@ -1027,8 +1027,8 @@
             </ul>
 
             <a href="https://www.pinterest.com/pin/1132585006307859648/">
-                The sweetest shelves
-              </a>
+              Decorative Lamp
+            </a>
           
             <p>
               After deciding to move away from the shelf idea, I began working on a decorative lamp design. 
@@ -1118,18 +1118,40 @@
               Kerf refers to the small amount of material removed by the laser beam during cutting. 
               Even though the laser beam is very thin, it still removes a measurable amount of material. 
               If this offset is not taken into account, press-fit joints can end up either too loose or too tight.
-
-              To find the correct settings, I created several test pieces to experiment with different 
-              kerf values and joint sizes. These tests included both finger joints and stab-in joints, 
-              which are small tabs that slide into corresponding slots.
-
-              In total I produced seven different test pieces, adjusting the cutting parameters each time. 
-              After evaluating how tightly the pieces fit together, I found that the best settings were:
             </p>
-            <ul>
-              <li>Kerf: 0.17 mm</li>
-              <li>Speed: 22%</li>
-            </ul>
+  
+            <p>
+              The test was performed using 5 mm plexiglass. The same Inkscape design was used,
+              consisting of one large rectangle with eight smaller rectangles inside it.
+              After laser cutting the design, the total gap created by the cuts measured
+              0.19 mm. Dividing this by the nine cuts gives the kerf value.
+            </p>
+        
+            <p><strong>0.19 mm / 9 ≈ 0.021 mm per cut</strong></p>
+            <p>
+              The same test was repeated using 3 mm plexiglass. The identical Inkscape design
+              was used and cut without any kerf compensation. After cutting, the measured
+              total gap was again 0.19 mm.
+            </p>
+            <p><strong>0.20 mm / 9 ≈ 0.022 mm per cut</strong></p>
+            
+            <p>
+              The initial kerf measurements of 0.21 mm and 0.22 mm seemed relatively large,
+              so additional testing was needed to verify whether these values were actually
+              the correct kerf for the laser cutter. Because kerf measurements can vary
+              depending on material thickness, laser power, and cutting speed, I decided
+              to perform several test cuts to find the most accurate value.
+            
+              To do this, I created several test pieces to experiment with different
+              kerf values and joint sizes. These tests included both finger joints and
+              stab-in joints, which are small tabs that slide into corresponding slots.
+            
+              In total I produced seven different test pieces, adjusting the cutting
+              parameters each time. After evaluating how tightly the pieces fit together,
+              I found that the earlier kerf estimates were not optimal. The best fitting
+              result was achieved with a kerf value of <strong>0.17 mm</strong> and a
+              cutting speed of <strong>22%</strong>.
+            </p>
             <p>
               With these settings the finger joints were tight enough to hold the structure together, 
               but still possible to assemble without damaging the acrylic. The stab-in joints also fit 
