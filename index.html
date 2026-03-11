@@ -1433,7 +1433,7 @@
             const controls = new THREE.OrbitControls(camera, renderer.domElement);
           
             const loader = new THREE.GLTFLoader();
-            loader.load('assets/3d/einstein.glb', function(gltf){
+            loader.load('einsteiin/einsteiin.glb', function(gltf){
               const model = gltf.scene;
               const box = new THREE.Box3().setFromObject(model);
               const size = box.getSize(new THREE.Vector3()).length();
