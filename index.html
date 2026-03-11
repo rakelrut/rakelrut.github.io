@@ -799,9 +799,9 @@
 
           <!-- Vinyl sticker -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="175">
-            <h4 style="font-size: 1.6rem; font-weight: 540; margin-bottom: 20px;">
+            <h3 style="font-size: 1.6rem; font-weight: 540; margin-bottom: 20px;">
               Vinyl Sticker
-            </h4> 
+            </h3> 
             <p>
               As part of the assignment I used a vinyl cutter to create a graphic sticker. 
               I designed the graphic in Inkscape, which is a vector-based design software 
@@ -855,9 +855,9 @@
           </div>
            
           
-          <h2 style="font-size: 1.6rem; font-weight: 540; margin-bottom: 20px;">
+          <h3 style="font-size: 1.6rem; font-weight: 540; margin-bottom: 20px;">
             Wall-Mounted Shelf
-          </h2> 
+          </h3> 
 
           <!-- Idea and Brainstorming -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="175">
@@ -1005,9 +1005,9 @@
           </div>
 
 
-          <h2 style="font-size: 1.6rem; font-weight: 540; margin-bottom: 20px;">
+          <h3 style="font-size: 1.6rem; font-weight: 540; margin-bottom: 20px;">
             Decorative Lamp
-          </h2> 
+          </h3> 
           
           <!-- New Idea – Decorative Lamp -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="300">
@@ -1205,56 +1205,11 @@
           <h2 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 20px;">
             Project 3
           </h2>
-          <script>
-  
-            const container = document.getElementById("stlViewer");
-            
-            const scene = new THREE.Scene();
-            
-            const camera = new THREE.PerspectiveCamera(
-              75,
-              container.clientWidth / container.clientHeight,
-              0.1,
-              1000
-            );
-            
-            const renderer = new THREE.WebGLRenderer({ antialias: true });
-            renderer.setSize(container.clientWidth, container.clientHeight);
-            container.appendChild(renderer.domElement);
-            
-            // light
-            const light = new THREE.DirectionalLight(0xffffff, 1);
-            light.position.set(1,1,1);
-            scene.add(light);
-            
-            // controls
-            const controls = new THREE.OrbitControls(camera, renderer.domElement);
-            
-            // STL loader
-            const loader = new THREE.STLLoader();
-            
-            loader.load('einstein/einstein.stl', function (geometry) {
-            
-              const material = new THREE.MeshPhongMaterial({ color: 0x888888 });
-            
-              const mesh = new THREE.Mesh(geometry, material);
-              geometry.center();
-            
-              scene.add(mesh);
-            
-            });
-            
-            camera.position.z = 120;
-            
-            function animate() {
-              requestAnimationFrame(animate);
-              controls.update();
-              renderer.render(scene, camera);
-            }
-            
-            animate();
           
-          </script>
+          <div class="project-subsection" data-aos="fade-up" data-aos-delay="350">
+          <h3>3D printing</h3>
+
+            
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="175">
             <h4>Project Idea</h4>    
           <div> 
@@ -1429,6 +1384,63 @@
           </div>
         </div>
 
+
+        <div class="project-subsection" data-aos="fade-up" data-aos-delay="350">
+        <h3>3D Scanning</h3>
+          
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/STLLoader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+        
+        <script>
+        const container = document.getElementById("stlViewer");
+        
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xf5f5f5);
+        
+        const camera = new THREE.PerspectiveCamera(
+          60,
+          container.clientWidth / container.clientHeight,
+          0.1,
+          1000
+        );
+        
+        const renderer = new THREE.WebGLRenderer({ antialias:true });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        container.appendChild(renderer.domElement);
+        
+        const light = new THREE.DirectionalLight(0xffffff, 1);
+        light.position.set(1,1,1);
+        scene.add(light);
+        
+        const ambient = new THREE.AmbientLight(0x404040);
+        scene.add(ambient);
+        
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        
+        const loader = new THREE.STLLoader();
+        
+        loader.load('Einstein/einstein.stl', function (geometry) {
+        
+          const material = new THREE.MeshPhongMaterial({ color: 0x999999 });
+        
+          const mesh = new THREE.Mesh(geometry, material);
+          geometry.center();
+        
+          scene.add(mesh);
+        
+        });
+        
+        camera.position.z = 120;
+        
+        function animate() {
+          requestAnimationFrame(animate);
+          controls.update();
+          renderer.render(scene, camera);
+        }
+        
+        animate();
+        </script>
 
 
 
