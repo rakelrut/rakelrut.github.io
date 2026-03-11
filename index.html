@@ -1429,6 +1429,19 @@
             light.position.set(50,50,50);
             scene.add(light);
             scene.add(new THREE.AmbientLight(0x404040));
+            
+            const directional1 = new THREE.DirectionalLight(0xffffff, 1);
+            directional1.position.set(50, 50, 50);
+            scene.add(directional1);
+            
+            const directional2 = new THREE.DirectionalLight(0xffffff, 0.5);
+            directional2.position.set(-50, 50, -50);
+            scene.add(directional2);
+            
+            const ambient = new THREE.AmbientLight(0xffffff, 0.5); // bright ambient
+            scene.add(ambient);
+
+
           
             const controls = new THREE.OrbitControls(camera, renderer.domElement);
           
