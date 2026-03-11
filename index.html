@@ -1388,6 +1388,18 @@
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="175">
             <h3>3D Scan Preview</h3>
             <div id="stlViewer" style="width:800px; height:600px; border:1px solid #ddd; margin-top:10px;"></div>
+            <p>
+              To create a full-color 3D model of my <strong>Einstein Peningabaukur</strong>, I used <a href="https://polycam.com" target="_blank">Polycam</a> on my smartphone. 
+              Polycam allowed me to take multiple photos of the sculpture from different angles and automatically generate a detailed 3D model. 
+            </p>
+            <p>
+              Once the scan was complete, I exported the model as a <strong>GLB file</strong>. This file format preserves all the color and texture information from the original sculpture. 
+              By using GLB instead of STL, I can display the model on the website exactly as it looks in real life, with full color.
+            </p>
+            <p>
+              The exported GLB file was then uploaded to the website and displayed using <strong>Three.js</strong> with interactive rotation and zoom. 
+              This allows visitors to explore the model from any angle directly in their browser.
+            </p>
           </div>
           
           <!-- Scripts for THREE.js -->
@@ -1404,7 +1416,7 @@
             scene.background = new THREE.Color(0xf5f5f5);
           
             const camera = new THREE.PerspectiveCamera(60, 800/600, 0.1, 1000);
-            camera.position.set(0, 40, 120);
+            camera.position.set(0, 60, 120);
             camera.lookAt(0,0,0);
           
             const renderer = new THREE.WebGLRenderer({antialias:true});
