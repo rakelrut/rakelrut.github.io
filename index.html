@@ -799,9 +799,9 @@
 
           <!-- Vinyl sticker -->
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="175">
-            <h2 style="font-size: 1.6rem; font-weight: 540; margin-bottom: 20px;">
+            <h4 style="font-size: 1.6rem; font-weight: 540; margin-bottom: 20px;">
               Vinyl Sticker
-            </h2> 
+            </h4> 
             <p>
               As part of the assignment I used a vinyl cutter to create a graphic sticker. 
               I designed the graphic in Inkscape, which is a vector-based design software 
@@ -1202,10 +1202,59 @@
         
         <!-- Project 3 -->
         <div id="project3" class="project-subsection" data-aos="fade-up" data-aos-delay="250">
-          <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 20px;">
+          <h2 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 20px;">
             Project 3
-          </h3>
-
+          </h2>
+          <script>
+  
+            const container = document.getElementById("stlViewer");
+            
+            const scene = new THREE.Scene();
+            
+            const camera = new THREE.PerspectiveCamera(
+              75,
+              container.clientWidth / container.clientHeight,
+              0.1,
+              1000
+            );
+            
+            const renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+            
+            // light
+            const light = new THREE.DirectionalLight(0xffffff, 1);
+            light.position.set(1,1,1);
+            scene.add(light);
+            
+            // controls
+            const controls = new THREE.OrbitControls(camera, renderer.domElement);
+            
+            // STL loader
+            const loader = new THREE.STLLoader();
+            
+            loader.load('Einstein/einstein.stl', function (geometry) {
+            
+              const material = new THREE.MeshPhongMaterial({ color: 0x888888 });
+            
+              const mesh = new THREE.Mesh(geometry, material);
+              geometry.center();
+            
+              scene.add(mesh);
+            
+            });
+            
+            camera.position.z = 120;
+            
+            function animate() {
+              requestAnimationFrame(animate);
+              controls.update();
+              renderer.render(scene, camera);
+            }
+            
+            animate();
+          
+          </script>
           <div class="project-subsection" data-aos="fade-up" data-aos-delay="175">
             <h4>Project Idea</h4>    
           <div> 
