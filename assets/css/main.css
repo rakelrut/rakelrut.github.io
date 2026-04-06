@@ -4,52 +4,47 @@
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
-
 :root { 
-  --background-color: #ffffff;
-  --default-color: #272829;
-  --heading-color: #050d18;
+  /* Global Colors */
+  --background-color: #ffffff;       /* main page background */
+  --default-color: #272829;          /* default text color */
+  --heading-color: #050d18;          /* headings color */
 
-  /* 🌸🌊 NEW BLUE + PINK THEME */
-  --accent-color: #3b82f6;        /* blue */
-  --accent-secondary: #f472b6;    /* pink */
-  --accent-gradient: linear-gradient(135deg, #3b82f6, #f472b6);
+  /* 🌸 Pink Theme */
+  --accent-color: #f472b6;           /* main pink accent */
+  --accent-secondary: #f9a8d4;       /* lighter pink for secondary accents */
+  --accent-gradient: linear-gradient(135deg, #f472b6, #f9a8d4); /* gradient for buttons or highlights */
 
-  --surface-color: #ffffff;
-  --contrast-color: #ffffff;
+  --surface-color: #ffffff;          /* background of boxed elements */
+  --contrast-color: #ffffff;         /* text on accent or colored backgrounds */
+
+  scroll-behavior: smooth;           /* smooth scroll */
 }
 
 /* Nav Menu Colors */
 :root {
-  --nav-color: #a8a9b4;
-  --nav-hover-color: #ffffff;
+  --nav-color: #a8a9b4;                  /* default nav text color */
+  --nav-hover-color: #ffffff;            /* nav text on hover */
 
-  /* slightly tinted dark blue instead of pure black */
-  --nav-mobile-background-color: #0f172a;
-  --nav-dropdown-background-color: #0f172a;
+  --nav-mobile-background-color: #0f172a;      /* mobile menu background */
+  --nav-dropdown-background-color: #0f172a;    /* dropdown background */
 
-  --nav-dropdown-color: #a8a9b4;
-  --nav-dropdown-hover-color: #ffffff;
+  --nav-dropdown-color: #a8a9b4;        /* dropdown links color */
+  --nav-dropdown-hover-color: #ffffff;  /* dropdown hover color */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
+/* Light/Dark Section Overrides */
 .light-background {
-  --background-color: #f4fafd;
+  --background-color: #fff0f6;  /* very light pink */
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #040b14;
+  --background-color: #1f1f1f;  /* dark background */
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #151f2b;
+  --surface-color: #2a2a2a;
   --contrast-color: #ffffff;
-}
-
-/* Smooth scroll */
-:root {
-  scroll-behavior: smooth;
 }
 
 /*--------------------------------------------------------------
