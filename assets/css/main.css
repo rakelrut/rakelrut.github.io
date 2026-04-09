@@ -629,3 +629,10 @@ pre, code {
   align-items: center;
   margin-bottom: 12px;
 }
+
+
+.contact .php-email-form .loading,
+.contact .php-email-form .error-message,
+.contact .php-email-form .sent-message {
+  display: none;
+}
