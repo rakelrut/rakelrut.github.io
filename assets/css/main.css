@@ -662,3 +662,31 @@ pre, code {
   margin-bottom: 60px;
   border-bottom: 2px solid rgba(244, 114, 182, 0.25);
 }
+
+.project-image-box {
+  margin-bottom: 25px;
+  text-align: center; /* remove if you want left aligned */
+}
+
+.project-image-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 12px auto;
+}
+
+.image-explain {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.project-image-box {
+  text-align: left;
+}
+
+.project-image-box img {
+  margin: 0 0 12px 0;
+}
