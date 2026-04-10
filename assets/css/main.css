@@ -140,26 +140,61 @@ h6 {
 }
 
 /* Resume */
+
+/* Resume */
 .resume .resume-title {
   color: var(--heading-color);
+  margin-bottom: 20px;
 }
 
 .resume .resume-item {
+  position: relative;
+  padding: 0 0 30px 28px;   /* pushes text away from pink line */
+  margin-top: -2px;
   border-left: 2px solid var(--accent-color);
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
 }
 
 .resume .resume-item h4 {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
 .resume .resume-item h5 {
   background-color: var(--background-color);
+  display: inline-block;
+  padding: 6px 14px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+}
+
+.resume .resume-item p,
+.resume .resume-item ul,
+.resume .resume-item li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+.resume .resume-item ul {
+  padding-left: 18px;
 }
 
 .resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: -8px;
+  top: 2px;
+  border-radius: 50%;
   background: var(--background-color);
   border: 2px solid var(--accent-color);
 }
+
 
 /* Goals */
 #goals .section-title {
