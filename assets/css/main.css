@@ -669,6 +669,7 @@ pre, code {
 }
 
 .project-image-box img {
+  width: 400px;      /* change this number */
   max-width: 100%;
   height: auto;
   border-radius: 12px;
