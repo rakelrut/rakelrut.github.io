@@ -636,3 +636,23 @@ pre, code {
 .contact .php-email-form .sent-message {
   display: none;
 }
+
+/* Main project cards */
+#projects .project-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--accent-color);
+  border-radius: 18px;
+  padding: 32px;
+  margin-bottom: 70px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* More breathing room inside each project */
+#projects .project-card > .project-subsection {
+  margin-bottom: 28px;
+}
+
+#projects .project-card > .project-subsection:last-child {
+  margin-bottom: 0;
+}
